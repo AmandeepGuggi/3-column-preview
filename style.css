@@ -1,0 +1,110 @@
+:root{
+    --BrightOrange: hsl(31, 77%, 52%);
+    --DarkCyan: hsl(184, 100%, 22%);
+    --VeryDarkCyan: hsl(179, 100%, 13%);
+
+    --TransparentWhite : hsla(0, 0%, 100%, 0.75);/*(paragraphs)*/
+    --VeryLightGray : hsl(0, 0%, 95%);  /*(background, headings, buttons)*/
+
+}
+body{ 
+    margin: 0;
+}
+main{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    margin-block: 20px;
+}
+
+.card-container{
+    color: var(--TransparentWhite);
+    display: flex;
+    max-width: 910px;
+    margin: auto;
+    /* margin: 1rem auto; */
+    /* margin-inline: auto; */
+    /* justify-content: space-between; */
+    min-width: 400px;
+    background-color: blueviolet;
+    border-radius: 16px;
+    overflow: hidden;
+}
+a{
+    /* color: inherit; */
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    border: 1px solid var(--VeryLightGray);
+    padding: 10px 18px ;
+    border-radius: 2rem;
+    display: inline-block;
+    margin-top: auto;
+    background-color: var(--TransparentWhite);
+}
+.orange-card a{
+    color: var(--BrightOrange);
+}
+.blue-card a{
+    color: var(--DarkCyan);
+}
+.green-card a{
+    color: var(--VeryDarkCyan);
+}
+
+a:hover{
+    background-color: transparent;
+    color: var(--TransparentWhite);
+}
+
+.card{
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    /* align-self: flex-start; */
+    margin-right: auto;
+    width: 100%;
+}
+.card img{
+    width: 60px;
+    height: 40px;
+}
+.card h2{
+    text-transform: uppercase;
+    font-family: "Big Shoulders Display", sans-serif;
+    font-weight: 700;
+    font-size: 2.25rem;
+}
+.card p{
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    color: var(--TransparentWhite);
+    line-height: 25px;
+    margin-bottom: 2.5rem;
+}
+
+.orange-card{
+    background-color: var(--BrightOrange);
+    /* border-top-left-radius: 8px;
+    border-top-right-radius: 8px; */
+}
+.blue-card{
+    background-color: var(--DarkCyan);
+    
+}
+.green-card{
+    background-color: var(--VeryDarkCyan);
+    /* border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px; */
+}
+
+@media (max-width:850px) {
+    .card-container{
+        flex-direction: column;
+        max-width: 400px;
+    }
+    .card{
+        width: unset;
+        width: auto;
+    }
+}
